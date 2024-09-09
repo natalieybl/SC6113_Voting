@@ -3,7 +3,7 @@ let account;
 let votingContract;
 let owner;
 
-const contractAddress = "0xd34259D43DD4197c68D81295f565179979Bd4327"; // Replace with the deployed contract address
+const contractAddress = "0x6B5DCe054474AD05AC088250895158bCAB076e02"; // Replace with the deployed contract address
 const contractABI = [ /* ABI generated from Solidity contract */
 	{
 		"inputs": [],

@@ -15,6 +15,10 @@ def main():
 def transfer_money():
     return render_template('indexPresident.html')
 
+@app.route('/car',methods=["get","post"])
+def loop():
+    return render_template('indexCar.html')
+    
 @app.route('/city',methods=["get","post"])
 def loop():
     return render_template('indexCity.html')

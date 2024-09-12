@@ -7,7 +7,7 @@
     <title>Voting DApp</title>
      <style>
         body {
-            background-image: ("1.jpg")
+            background-image: ("1.jpg");
             font-family: 'Arial', sans-serif;
             background-color: #f0f0f0;
             margin: 0;
@@ -26,12 +26,13 @@
             max-width: 400px;
             width: 100%;
             text-align: center;
+            color: #00ffea;
         }
 
         h2 {
             font-size: 24px;
             margin-bottom: 20px;
-            color: #333;
+            color: #00ffea;
         }
 
         input, button {
@@ -41,23 +42,30 @@
             border-radius: 4px;
             border: 1px solid #ddd;
             font-size: 16px;
+            
         }
 
         button {
-            background-color: #007bff;
-            color: white;
-            border: none;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 4px;
+            border: 1px solid #00ffea; /* 修改按钮的边框为绿色 */
+            font-size: 16px;
+            background-color: #00ffea; /* 将按钮背景改为绿色 */
+            color: black; /* 按钮文字颜色为黑色 */
             cursor: pointer;
         }
 
+
         button:hover {
-            background-color: #0056b3;
+            background-color: #00cc00;
         }
 
         p {
             margin-top: 15px;
             font-size: 14px;
-            color: #007bff;
+            color: #00ffea;
             text-align: left;
         }
 
@@ -80,9 +88,9 @@
 <body>
     <div class="container" style="background-color:black; color:#00ffea;">
         <h2>Welcome to Voting DApp</h2> 
+        <h2>May I know your name? </h2>
         <br>
         <form action = "/main" method="post" >
-            <input type="text" name="q">
             <input type="submit" value="Enter">
         </form>
   </div>

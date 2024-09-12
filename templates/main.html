@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting DApp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 50px;
+        }
+        .container {
+            max-width: 800px;
+        }
+        #votingStatus {
+            margin-top: 20px;
+        }
+        /* Custom table styling */
+        .table {
+            width: 100%;
+            margin-bottom: 1rem;
+            color: #212529;
+            text-align: left;
+        }
+
+        .table thead th {
+            background-color: #e9f5ff; /* Light blue header */
+            font-weight: bold;
+            border-style: solid;
+            border-color: #0d0d0e;
+        }
+
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: #70b6e4;
+        }
+
+        .table-striped tbody tr:nth-of-type(even) {
+            background-color: #c61212;
+        }
+
+        /* Ensures the table works well on smaller screens */
+        .table-responsive {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* Make sure the text doesn't overflow the cells */
+        .table td, .table th {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Connect to MetaMask -->
+        <button id="connectButton" class="btn btn-primary">Connect to MetaMask</button>
+        <hr>
+        <h1 class="text-center">Welcome to Voting DApp</h1>
+        <br>
+
+
+        <div class="container">
+            <h2>Select the right DApp to cast your vote</h2> 
+            <br>
+            <form action = "/president" method="post">
+                <input type="submit" value="President Voting">
+            </form>
+            <br>
+            <form action = "/city" method="post">
+                <input type="submit" value="City Voting">
+            </form>
+            <br>
+            <form action = "/" method="post">
+                <input type="submit" value="Back to Index">
+            </form>
+        </div>
+      </div>
+</body>
+</html>

@@ -12,7 +12,7 @@ def main():
     return render_template('main.html', r = r)
 
 @app.route('/president',methods=["get","post"])
-def transfer_money():
+def president():
     return render_template('indexPresident.html')
 
 @app.route('/car',methods=["get","post"])

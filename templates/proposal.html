@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="static/style.css">
+    </head>
+    <body>
+
+        <!-- Proposals Table -->
+        <div class="table-section">
+            <b class="text-neon">Proposals</b>
+            <div class="table-responsive">
+                <table id="proposalsTable" class="table table-striped table-bordered table-hover neon-table">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Candidate Name</th>
+                            <th>Votes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dynamic content will be added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Voter List Table -->
+        <div class="table-section">
+            <b class="text-neon">Voter List</b>
+            <div class="table-responsive">
+                <table id="voterVotersTable" class="table table-striped table-bordered table-hover neon-table">
+                    <thead>
+                        <tr>
+                            <th>Voter's Address</th>
+                            <th>Registered</th>
+                            <th>Has Voted</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dynamic content will be added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <script>
+            // Sample proposals data
+            const proposals = [
+                { no: 1, candidate: "Golden Retriever", votes: 2 },
+                { no: 2, candidate: "Labrador Retriever", votes: 0 },
+                { no: 3, candidate: "German Shepherd", votes: 1 },
+                { no: 4, candidate: "Bulldog", votes: 1 },
+                { no: 5, candidate: "Beagle", votes: 0 }
+            ];
+
+            // Voter data
+            const voters = [
+                { address: "0x6ff53f2FF440571232B98Cd48d4c1aa2d97f6eC9", registered: true, hasVoted: true },
+                { address: "0xe5BDa42c27d75a72f425D6130257901f698eB56A", registered: true, hasVoted: false },
+                { address: "0x507b5548a3E454d501C586BD6c0d333AcF353660", registered: true, hasVoted: true },
+                { address: "0x2FC173654a06B8c63A2D20b929936d9932c36b73", registered: true, hasVoted: true },
+                { address: "0xC6730A152f5BEa6bFC5F11f90882B7375076d5a3", registered: true, hasVoted: true }
+            ];
+
+            // Function to dynamically add proposal rows to the table
+            function populateProposalsTable() {
+                const proposalsTableBody = document.querySelector('#proposalsTable tbody');
+                proposals.forEach(proposal => {
+                    const row = `
+                        <tr>
+                            <td>${proposal.no}</td>
+                            <td>${proposal.candidate}</td>
+                            <td>${proposal.votes}</td>
+                        </tr>
+                    `;
+                    proposalsTableBody.innerHTML += row;
+                });
+            }
+
+            // Function to dynamically add voter rows to the table
+            function populateVoterTable() {
+                const voterTableBody = document.querySelector('#voterVotersTable tbody');
+                voters.forEach(voter => {
+                    const row = `
+                        <tr>
+                            <td>${voter.address}</td>
+                            <td>${voter.registered ? 'Yes' : 'No'}</td>
+                            <td>${voter.hasVoted ? 'Yes' : 'No'}</td>
+                        </tr>
+                    `;
+                    voterTableBody.innerHTML += row;
+                });
+            }
+
+            // Populate both tables on page load
+            window.onload = () => {
+                populateProposalsTable();
+                populateVoterTable();
+            };
+        </script>
+    </body>
+</html>

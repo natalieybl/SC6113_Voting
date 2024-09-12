@@ -663,7 +663,7 @@ document.getElementById('showWinnerButton').addEventListener('click', async () =
 		// Beautify the output with a congratulatory message
 		const winningText = `
 				<h4>🎉 Congratulations! 🎉</h4>
-				<p><strong>${winningProposal.description}</strong> is the new voted president with a total of <strong>${winningProposal.voteCount} votes</strong>.</p>
+				<p><strong>${winningProposal.description}</strong> is the new best Car model with a total of <strong>${winningProposal.voteCount} votes</strong>.</p>
 				<p>Thank you to everyone who participated in this democratic process. Your votes made a difference!</p>
 			`;
 		document.getElementById('winningProposalText').innerHTML = winningText;
